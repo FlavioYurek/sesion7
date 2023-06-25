@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "button ok",
+    "version": "1.0",
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "permissions": ["activeTab"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "host_permissions": [
+      "<all_urls>"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["contentScript.js", "popup.js"]
+      }
+    ]
+  }
+  
